@@ -15,6 +15,8 @@ Proyecto de simulación de balanceo de carga web utilizando Nginx y múltiples s
 1. Descargar o clonar el repositorio:
 ```bash
 git clone https://github.com/kevinandresbenitez/WebLoadBalancer
+```
+```
 cd BalanceadorDeCarga
 ```
 2. Levantar los contenedores:
@@ -23,7 +25,7 @@ docker compose up
 ```
 3. Abrir el navegador e ir a:
 ```
-http://localhost
+http://localhost:1234
 ```
 4. Recargar la página varias veces para ver cómo el balanceador distribuye las solicitudes entre los servidores.
 
@@ -34,7 +36,7 @@ http://localhost
 * Para cambiar los servidores o puertos, editar `docker-compose.yml` y `nginx/conf.d/default.conf`.
 
 ## Aclaraciones
-* El balanceador está configurado para usar el puerto 80.
+* El balanceador está configurado para usar el puerto 1234.
 * Si hay otro servicio ocupando ese puerto, no funcionará.
 * Cada servidor Express usa volúmenes, por lo que las dependencias (`node_modules`) se generan dentro de tu carpeta local `Servers/ServerX`.
 
