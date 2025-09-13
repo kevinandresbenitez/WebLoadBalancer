@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+  LoadBalancer:
+    image: nginx:alpine
+    ports:
+      - "80:80"
+    volumes:
+      - ./default.conf:/etc/nginx/conf.d/default.conf
+  WebServer1:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./Servers/Server1:/app
+    command: sh -c "yarn install && yarn run start"
+  WebServer2:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./Servers/Server2:/app
+    command: sh -c "yarn install && yarn run start"
+  WebServer3:
+    image: node:18-alpine
+    working_dir: /app
+    volumes:
+      - ./Servers/Server3:/app
+    command: sh -c "yarn install && yarn run start"
