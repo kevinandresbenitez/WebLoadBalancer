@@ -17,7 +17,7 @@ Proyecto de simulación de balanceo de carga web utilizando Nginx y múltiples s
 git clone https://github.com/kevinandresbenitez/WebLoadBalancer
 ```
 ```
-cd BalanceadorDeCarga
+cd WebLoadBalancer
 ```
 2. Levantar los contenedores:
 ```bash
