@@ -6,7 +6,7 @@ app.get('/', (req, res) => {
 const html= 
   `<html>
       <head>
-        <title>Servidor 1</title>
+        <title>Servidor 2</title>
         <style>
           body { 
             font-family: Arial, sans-serif; 
